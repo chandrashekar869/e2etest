@@ -22,7 +22,7 @@
 				<th><i class="w3-medium custom-icon fa fa-pencil"></i> Update</th>
 				<th><i class="w3-medium custom-icon fa fa-trash"></i> Delete</th>
 			</tr>
-			<tr *ngFor="let student of studentListData | filter:filterData; index as i;" appHighlightStudent>
+			<tr id="{{i+1}}" *ngFor="let student of studentListData | filter:filterData; index as i;" appHighlightStudent>
 				<td>{{i +1}}</td>
 				<td class="pointer" [routerLink]="['detail', i]">{{student.first_name}} </td>
 				<td class="pointer" [routerLink]="['detail', i]">{{student.last_name}}</td>
